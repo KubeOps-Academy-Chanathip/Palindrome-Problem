@@ -1,7 +1,7 @@
 fn main() {
     loop{
     let mut get_word = String::new();
-    println!("Enter syour palin");
+    println!("Enter your palin");
     let word= std::io::stdin().read_line(&mut get_word).expect("Please put correct string.");
     if get_word=="end"{
         println!("That's End");
