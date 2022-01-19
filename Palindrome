@@ -1,1 +1,23 @@
-
+fn main() {
+    loop{
+    let mut get_word = String::new();
+    println!("Enter syour palin");
+    let word= std::io::stdin().read_line(&mut get_word).expect("Please put correct string.");
+    if get_word=="end"{
+        println!("That's End");
+        break;
+    }else{
+        palin_check(word);
+    }
+}
+  }
+fn palin_check(word: &str)  {
+   //เอาget_wordมาreverseแล้วเอามาเทียบกัน
+   let rev= word.chars().rev().collect::<String>();
+   if word == rev{
+       println!("This is Palindrome");
+   }else{
+    println!("This is not Palindrome");
+   }
+}  
+  
